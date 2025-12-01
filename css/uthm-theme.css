@@ -1,0 +1,227 @@
+/* =========================================================
+   UTHM THEME — Bootstrap Override
+   Final Clean Version (NO BUTTON BUG)
+   ========================================================= */
+
+/* ------------------------------
+   Root Colors
+--------------------------------*/
+:root {
+  --bs-primary: #003366; /* Biru UTHM */
+  --bs-secondary: #C8102E; /* Merah UTHM */
+  --bs-light: #ffffff;
+  --bs-dark: #1e1b18;
+  --bs-body-color: #003366;
+  --bs-body-bg: #ffffff;
+  --bs-border-color: rgba(0, 51, 102, 0.25);
+  --bs-link-color: #003366;
+  --bs-link-hover-color: #C8102E;
+}
+
+/* ------------------------------
+   Typography
+--------------------------------*/
+body, p, li {
+  color: var(--bs-body-color);
+  font-family: "Roboto Slab", "Montserrat", Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--bs-primary);
+}
+h2.section-heading {
+  color: var(--bs-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ------------------------------
+   Navbar
+--------------------------------*/
+.navbar {
+  background-color: var(--bs-primary) !important;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: all 0.25s ease;
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: var(--bs-secondary) !important;
+}
+.navbar .nav-link.active {
+  border-bottom: 3px solid var(--bs-secondary);
+}
+.navbar.navbar-shrink {
+  padding-top: 0.3rem !important;
+  padding-bottom: 0.3rem !important;
+  background-color: #00264d !important;
+}
+
+/* ------------------------------
+   BUTTONS — CLEAN FINAL VERSION
+--------------------------------*/
+
+/* NORMAL STATE (BIRU) */
+.btn-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+  transition: all 0.25s ease !important;
+}
+
+/* HOVER & ACTIVE (MERAH) */
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:active:focus {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+/* Red secondary buttons */
+.btn-secondary {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+  color: #fff !important;
+}
+.btn-secondary:hover {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+
+/* No outline buttons allowed */
+.btn-outline-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+
+/* pill shape */
+.btn-pill {
+  border-radius: 999px !important;
+  padding-inline: 1.75rem !important;
+}
+
+/* ------------------------------
+   Tables
+--------------------------------*/
+.table thead {
+  background-color: var(--bs-primary);
+  color: #ffffff;
+}
+.table-hover tbody tr:hover {
+  background-color: rgba(200,16,46,0.08);
+  color: var(--bs-secondary);
+}
+.table td, .table th {
+  border-color: var(--bs-border-color);
+}
+
+/* ------------------------------
+   Form Inputs
+--------------------------------*/
+.form-control,
+.form-select {
+  border: 1px solid rgba(0,51,102,0.25);
+  color: var(--bs-primary);
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--bs-secondary);
+  box-shadow: 0 0 0 0.25rem rgba(200,16,46,0.15);
+}
+.form-check-input:checked {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+/* ------------------------------
+   Cards & Layout
+--------------------------------*/
+.card {
+  border-color: rgba(0,51,102,0.15);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,51,102,0.05);
+}
+.card-soft {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border-color: rgba(0, 51, 102, 0.08);
+}
+.page-section {
+  padding: 5rem 0;
+}
+
+.pathway-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.pathway-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.15);
+}
+
+/* ------------------------------
+   Hero Section
+--------------------------------*/
+.hero-section {
+  background: linear-gradient(135deg, #f4f7fb 0%, #ffffff 60%);
+  padding: 6rem 0 4rem;
+}
+.hero-tagline {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bs-secondary);
+}
+.hero-title {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.hero-subtitle {
+  font-size: 1rem;
+  max-width: 520px;
+}
+
+/* ------------------------------
+   Misc
+--------------------------------*/
+.badge-soft {
+  background-color: rgba(0, 51, 102, 0.06);
+  color: var(--bs-primary);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.75rem;
+}
+.section-intro {
+  max-width: 720px;
+  margin-inline: auto;
+}
+body {
+  padding-top: 72px;
+}
+
+/* ------------------------------
+   Footer
+--------------------------------*/
+footer {
+  background-color: var(--bs-primary);
+  color: #ffffff;
+  padding: 2rem 0;
+  text-align: center;
+}
+footer a {
+  color: #ffffff;
+}
+footer a:hover {
+  color: var(--bs-secondary);
+}
